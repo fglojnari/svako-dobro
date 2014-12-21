@@ -8,22 +8,10 @@
 
 <template name="calendar">
 	<div class="frameSchedule">
-		<div class="hours">
-		</div>
-		<div class="day">
-		</div>
-		<div class="day">
-		</div>
-		<div class="day">
-		</div>
-		<div class="day">
-		</div>
-		<div class="day">
-		</div>
-		<div class="day">
-		</div>
-		<div class="day">
-		</div>
+		{{>hours}}
+		{{#each days}}
+			{{> day}}
+		{{/each}}
 	</div>
 </template>
 
@@ -32,3 +20,13 @@
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template> -->
+<template name="hours">
+	<div class="hours">
+		</div>
+</template>
+
+<template name="day">
+	<div class="day">
+		<p>	{{this}}</p>
+		</div>
+</template>

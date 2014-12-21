@@ -1,9 +1,10 @@
   // counter starts at 0
   Session.setDefault("counter", 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
+  Template.calendar.helpers({
+    days: function () {
+      var array = ["Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota", "Nedjelja" ];
+      return array;
     }
   });
 
